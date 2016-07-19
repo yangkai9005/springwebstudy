@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\Users\lenovo\.m2\repository\mysql\mysql-connector-java\5.1.24\mysql-connector-java-5.1.24.jar" />
+	<context id="context1">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
+		</commentGenerator><!-- 将Example替换 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/springstudy?characterEncoding=UTF-8"
+			userId="root" password="nuomei123" />
+		<javaModelGenerator targetPackage="com.springweb.study.entity"
+			targetProject="springwebstudy">
+			<property name="trimStrings" value="true" /><!-- 去掉空格 -->
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.springweb.study.mapper"
+			targetProject="springwebstudy" />
+		<javaClientGenerator targetPackage="com.springweb.study.dao"
+			targetProject="springwebstudy" type="XMLMAPPER">
+		</javaClientGenerator>
+		<table schema="nuomei" tableName="table_one"
+			domainObjectName="TableOne" enableCountByExample="false"
+			enableDeleteByPrimaryKey="true" enableInsert="true"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			enableSelectByPrimaryKey="true" enableUpdateByExample="false"
+			enableUpdateByPrimaryKey="true"></table>
+			
+			<table schema="nuomei" tableName="table_two"
+			domainObjectName="TableTwo" enableCountByExample="false"
+			enableDeleteByPrimaryKey="true" enableInsert="true"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			enableSelectByPrimaryKey="true" enableUpdateByExample="false"
+			enableUpdateByPrimaryKey="true"></table>
+	</context>
+</generatorConfiguration>
